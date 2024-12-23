@@ -18,5 +18,7 @@ public class user_input {
         System.out.println("Hello: " + name); // Display the string with the user input
         System.out.println("Your Age: " + age); // Display the string with the user input
         System.out.println("Favorite Sport: " + sport);
+
+        scanner.close();
     }
 }
