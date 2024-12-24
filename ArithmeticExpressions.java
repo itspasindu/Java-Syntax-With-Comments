@@ -1,7 +1,7 @@
 public class ArithmeticExpressions {
     public static void main(String[] args) {
         int x = 1;
-        int y = x++; // Post-increment: assign the value of x to y, then increment x by 1
+        int y = x; // Post-increment: assign the value of x to y, then increment x by 1
 
         System.out.println(x); // Output: 2
         System.out.println(y); // Output: 1
