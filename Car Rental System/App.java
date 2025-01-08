@@ -53,11 +53,36 @@ public class App {
                 }
                 else {
                     System.out.println("Invalid choice");
-                }
-
+                } 
+                break;
+           
+            case 2:
+            if (rentedCars.isEmpty()){
+                System.out.println("No cars rented out");
             }
-            break;
+            else {
+                System.out.println("Rented Cars:");
+
+                for (int i=0; i<rentedCars.size(); i++){
+                    System.out.println((i+1) + "." + rentedCars.get(i));
+                }
+                System.out.println("Enter Car Number to Return: ");
+                int returnchoice = scanner.nextInt();
+                scanner.nextLine();
+
+                if (returnchoice > 0 && returnchoice <= rentedCars.size()){
+                    String returnedCar = rentedCars.remove(returnchoice - 1);
+                    availableCars.add(returnedCar);
+                    System.out.println("You have returned " + returnedCar);
+                } else {
+                    System.out.println("Invalid choice");
+                }
+                break;
+            }
+
+
         }
         
     }
+}
 }
